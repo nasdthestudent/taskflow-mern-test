@@ -1,47 +1,56 @@
 # TaskFlow - MERN Stack Task Management Application
 
-## Project Overview
-This project is an implementation of the TaskFlow test, a MERN stack task management application with authentication, task management, filtering, and administrative features.
+## Overview
+This repository is my submission for the TaskFlow MERN stack assessment.  
+The project implements authentication, task management, filtering, and administrative features.  
 
-## Technologies Used
-- **Frontend**: React, React Router, TailwindCSS
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Authentication**: JWT-based authentication
-- **State Management**: React Context API and localStorage
+⚠️ **Note:** The submission is incomplete due to limited time.  
+I’ve made partial progress on **Task 1 (Login/Register page)**, but Tasks 2 and 3 are not yet implemented.  
+I will continue improving this repository for learning purposes.  
 
-### Prerequisites
-- Node.js >v22
-- NPM >v10.9
-- MongoDB
+---
 
+## Technologies
+- Frontend: React, React Router, TailwindCSS  
+- Backend: Node.js, Express  
+- Database: MongoDB  
+- Authentication: JWT  
+- State Management: React Context API, localStorage  
 
-## Test Problems
-1. **Complete the tasks**:
+---
 
-△ Task 1 - Display Login/Register page before the landing page
-- Users are should to login first to access the full list of tabs.
-- When they're logged out, only Dashboard panel should to be displayed.
+## Prerequisites
+- Node.js > v22  
+- NPM > v10.9  
+- MongoDB  
 
-△ Task 2 - Task Filter
-- Allow users to filter tasks based on their completion status (e.g., show only completed or incomplete tasks).
-- Optional: Add a search feature to filter tasks by title.
+---
 
-△ Task 3 - Add User Log page on the Admin page
-- Display the user logs(login time, logout time, JWT token name, user name, role, ip address)
-- The user logs could be deleted by admin action - DELETE
+## Current Progress
+- [x] Basic project setup  
+- [ ] Task 1 - Login/Register page (partial)  
+- [ ] Task 2 - Task filter  
+- [ ] Task 3 - Admin user log  
 
-2. **Commit Your Changes**:
-- Make sure you commit your changes regularly:
-    ```bash
-    git add .
-    git commit -m "Task1 completed!"
-    git push origin main
-    ```
+---
 
-3. **Submit Your Repository Link**:
-- Once you’ve completed the tasks, send the result to https://forms.gle/1E2z5713vGV9vhr4A.
-- Please make sure that your repository is **public** or share access if it's private.
+## How to Run
+1. Clone this repo  
+   ```bash
+   git clone <your-repo-link>
+   cd taskflow-mern-test
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
+4. Make sure MongoDB is running locally (mongodb://127.0.0.1:27017)
 
-4. **Deadline**:
-  30 ~ 45min
+## Submission Note
+
+Thank you for the opportunity to work on this task.
+Even though I couldn’t complete all tasks within the deadline, this assessment helped me realize areas I need to improve, especially setting up and working with MongoDB for backend integration.
