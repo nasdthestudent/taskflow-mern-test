@@ -18,15 +18,24 @@ const PORT = process.env.PORT || 5000;
 
 const mongoURI = process.env.MONGO_URI;
 if (!mongoURI) {
-    console.error(" MONGO_URI is not defined. Check your .env file!");
+    console.error("MONGO_URI is not defined. Check your .env file!");
     process.exit(1);
 }
-app.listen(PORT,()=>{
-    console.log("server started");
-})
+
+// Connect to MongoDB first, then start the server. This makes failures explicit
+// and avoids the app appearing to be 'started' when DB is unreachable.
 mongoose.connect(mongoURI)
-    .then(() => console.log(" Connected to MongoDB!"))
-    .catch(err => console.error(" Database connection failed:", err));
+  .then(() => {
+    console.log("Connected to MongoDB!");
+    app.listen(PORT, () => {
+      console.log(`Server started on port ${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error("Database connection failed:", err);
+    // Exit so a process manager or developer can notice and restart after fixing DB
+    process.exit(1);
+  });
 
 app.get("/",(req,res)=>{
     res.send("hello worldji!!")
