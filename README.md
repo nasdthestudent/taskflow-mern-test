@@ -37,7 +37,7 @@ I will continue improving this repository for learning purposes.
 ## How to Run
 1. Clone this repo  
    ```bash
-   git clone <your-repo-link>
+   git clone <https://github.com/nasdthestudent/taskflow-mern-test>
    cd taskflow-mern-test
    ```
 2. Install dependencies
