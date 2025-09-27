@@ -24,7 +24,10 @@ if (!mongoURI) {
 
 // Connect to MongoDB first, then start the server. This makes failures explicit
 // and avoids the app appearing to be 'started' when DB is unreachable.
-mongoose.connect(mongoURI)
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => {
     console.log("Connected to MongoDB!");
     app.listen(PORT, () => {

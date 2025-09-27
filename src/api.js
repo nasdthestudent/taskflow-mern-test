@@ -1,4 +1,5 @@
-const API_URL = "https://zidio-task-management-backend.onrender.com/";
+// const API_URL = "https://zidio-task-management-backend.onrender.com/";
+const API_URL = "http://localhost:5001/";
 
 export const fetchTasks = async () => {
   const response = await fetch(API_URL);
