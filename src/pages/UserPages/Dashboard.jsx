@@ -9,6 +9,8 @@ import UserSidebar from "./UserSidebar";
 import Column from "./Column";
 import SortableItem from "./SortableItem";
 import notificationSound from "./notification.mp3";
+import TaskFilter from "../../components/tasks/TaskFilter";
+
 
 const UserDashboard = () => {
   const [tasks, setTasks] = useState({
@@ -114,6 +116,9 @@ const UserDashboard = () => {
         </h2>
         <ToastContainer position="top-right" autoClose={5000} hideProgressBar />
 
+        {/* Task Filter Component */}
+        <TaskFilter tasks={tasks} setTasks={setTasks} />
+        
         {/* Kanban Board */}
         <div className="glassmorphism p-4 rounded-xl shadow-lg bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-lg border border-white/20">
           <DndContext collisionDetection={closestCorners} onDragEnd={handleDragEnd}>
